@@ -1,0 +1,214 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Lato:wght@400;700&display=swap');
+
+:root {
+  --fe-gold: #e3b04b;
+  --fe-beige: #fdf6ed;
+  --fe-green: #223223;
+  --fe-brown: #5c5743;
+  --fe-card: #fffdfa;
+  --fe-shadow: 0 8px 40px rgba(227,176,75,0.13);
+}
+
+/* Background setup */
+.fe-profile-bg {
+  position: relative;
+  width: 100vw;
+  min-height: 100vh;
+  overflow-x: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.fe-profile-bgimg {
+  position: absolute;
+  left: 0; top: 0;
+  width: 100vw;
+  height: 100vh;
+  object-fit: cover;
+  opacity: 1;
+  filter: blur(5px) brightness(1.01) saturate(1.07);
+  z-index: 1;
+}
+
+.fe-profile-bg-overlay {
+  background: transparent;
+  position: absolute;
+  left: 0; top: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 2;
+  pointer-events: none;
+}
+
+
+/* Wrapper to center the card */
+.fe-profile-outer {
+  position: relative;
+  z-index: 3;
+  width: 100vw;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Profile card */
+.fe-profile-card {
+  background: var(--fe-card);
+  border-radius: 32px;
+  box-shadow:
+    0 24px 58px 0 rgba(181,163,125,0.16),
+    0 2px 18px rgba(227,176,75,0.08);
+  padding: 3rem 2.5rem;
+  border-bottom: 3px solid #e8d9b8;
+  max-width: 720px;
+  margin: 3rem auto;
+  text-align: center;
+  transition: box-shadow 0.2s ease;
+  position: relative;
+}
+
+/* Glowing halo under card */
+.fe-profile-card::after {
+  content: "";
+  display: block;
+  position: absolute;
+  left: 50%; bottom: -12px;
+  transform: translateX(-50%);
+  height: 18px;
+  width: 70%;
+  background: radial-gradient(circle, rgba(227,176,75,0.11), transparent 80%);
+  filter: blur(6px);
+  z-index: -1;
+}
+
+/* Avatar */
+.fe-profile-avatar {
+  width: 120px;
+  height: 96px;
+  border-radius: 50%;
+  border: 2.5px solid var(--fe-gold);
+  box-shadow: 0 4px 16px rgba(181,163,125,0.13);
+  margin-bottom: 1rem;
+  object-fit: cover;
+  background: #fffbeed2;
+}
+
+/* Name and role */
+.fe-profile-name {
+  font-family: 'Playfair Display', serif;
+  font-size: 2.15rem;
+  color: var(--fe-gold);
+  font-weight: 700;
+  margin-bottom: 0.2rem;
+}
+
+.fe-profile-role {
+  color: var(--fe-green);
+  font-size: 1.09rem;
+  opacity: 0.82;
+  margin-bottom: 1.5rem;
+}
+
+/* Info section */
+.fe-profile-info {
+  background: #f7efe3;
+  border-radius: 20px;
+  text-align: left;
+  box-shadow: 0 1px 6px rgba(181,163,125,0.08);
+  width: 95%;
+  max-width: 470px;
+  padding: 1.3rem 2.2rem;
+  margin: 1.2rem auto 2rem auto;
+  font-size: 1.09rem;
+}
+
+
+.fe-label {
+  font-weight: 600;
+  color: var(--fe-gold);
+  margin-right: 0.7em;
+}
+
+.fe-value {
+  color: var(--fe-green);
+}
+
+/* Badges */
+.fe-badge {
+  background: #e8d9b8;
+  color: var(--fe-green);
+  padding: 0.4em 1em;
+  border-radius: 14px;
+  font-weight: 700;
+  font-size: 1rem;
+  margin-left: 0.35em;
+  display: inline-block;
+}
+
+/* Bronze badge gradient */
+.bronze-gradient {
+  background: linear-gradient(90deg, #c87f3d 65%, #fffbeed0 100%);
+  color: #fffdfa;
+  box-shadow: 0 2px 7px #c87f3d20;
+}
+
+/* Buttons */
+.fe-btn.fe-btn-gold {
+  background: linear-gradient(90deg, var(--fe-gold), #ffecc2 75%);
+  color: #fffdfa;
+  font-weight: 700;
+  font-size: 1.07rem;
+  border-radius: 22px;
+  padding: 0.85em 1.9em;
+  border: none;
+  margin-top: 1em;
+  box-shadow: 0 6px 18px #e3b04b24;
+  transition: background 0.17s ease;
+}
+.fe-btn.fe-btn-gold:hover {
+  background: #a0792d;
+  color: #fffbe6;
+}
+
+/* Loading text */
+.text-brown {
+  color: #a4855c !important;
+  text-align: center;
+  margin-top: 5rem;
+  font-family: 'Lato', sans-serif;
+  font-size: 1.2rem;
+}
+
+/* Animations placeholder */
+.animate-fadeInUp {
+  animation: fadeInUp 1s ease both;
+}
+
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(34px);
+  }
+  100% {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+/* Responsive */
+@media (max-width: 700px) {
+  .fe-profile-card {
+    max-width: 200%;
+    padding: 1.4rem 1.2rem;
+  }
+  .fe-profile-name {
+    font-size: 1.6rem;
+  }
+  .fe-profile-role {
+    font-size: 1rem;
+  }
+  .fe-profile-info {
+    font-size: 0.95rem;
+  }
+}

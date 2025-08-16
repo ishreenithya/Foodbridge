@@ -1,0 +1,316 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Lato:wght@400;700&display=swap');
+
+:root {
+  --fe-gold: #e3b04b;
+  --fe-beige: #fdf6ed;
+  --fe-green: #223223;
+  --fe-brown: #5c4c2e;
+  --fe-card: #fffdfa;
+  --fe-shadow: 0 8px 40px rgba(227,176,75,0.13);
+}
+
+/* Global Reset */
+body, .fe-bg {
+  background: var(--fe-beige);
+  color: var(--fe-green);
+  font-family: 'Lato', Arial, sans-serif;
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
+}
+
+/* -------------------- TOP BAR -------------------- */
+.fe-topbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #fffdfaee;
+  border-bottom: 2px solid #e3b04b33;
+  box-shadow: 0 2px 14px #e3b04b24;
+  padding: 1.15rem 3vw;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.fe-greeting {
+  font-size: 1.17rem;
+  color: var(--fe-gold);
+  letter-spacing: 0.05em;
+}
+
+.fe-topbar-actions {
+  display: flex;
+  gap: 1.1rem;
+}
+
+.fe-topbar-btn {
+  background: linear-gradient(90deg, var(--fe-gold), #ffecc2);
+  color: #fff;
+  border-radius: 14px;
+  padding: 0.66rem 1.5rem;
+  font-size: 1.1rem;
+  font-weight: 700;
+  border: none;
+  box-shadow: 0 2px 8px #e3b04b1c;
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s;
+}
+
+.fe-topbar-btn.logout {
+  background: linear-gradient(90deg, #b44523, #ffecc2);
+}
+
+.fe-topbar-btn:hover {
+  color: var(--fe-green);
+  background: #ffecc2;
+}
+
+/* -------------------- HERO SECTION -------------------- */
+.homepage-hero {
+  width: 100%;
+  min-height: 70vh;
+  height: 70vh;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center; /* Center horizontally */
+  margin: 0 auto 2.5rem auto;
+  border-radius: 0;
+  box-shadow: none;
+  overflow: hidden;
+  background-color: var(--fe-beige);
+}
+
+.hero-bgimg, .hero-overlay {
+  position: absolute;
+  left: 0; top: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+.hero-bgimg {
+  object-fit: cover;
+  filter: blur(5px) brightness(0.95) saturate(1.14);
+  opacity: 0.82;
+}
+.hero-overlay {
+  background: linear-gradient(120deg,#fffbe6b9 70%,#f7f4edc7 100%);
+  z-index: 2;
+}
+
+/* Center the hero content horizontally and vertically */
+.hero-content {
+  position: relative;
+  z-index: 3;
+  text-align: center;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;    /* Fill vertical space for centering */
+  padding: 0;
+}
+
+.hero-content h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: 3.3rem;
+  letter-spacing: .06em;
+  margin-bottom: 1.1rem;
+  color: var(--fe-gold);
+  font-weight: 700;
+}
+
+.hero-content p {
+  font-family: 'Lato', sans-serif;
+  font-size: 1.2rem;
+  color: var(--fe-brown);
+  margin-bottom: 2.2rem;
+}
+
+.hero-btn {
+  background: linear-gradient(90deg, var(--fe-gold) 80%, #ffecc2);
+  color: #fffdfa;
+  font-weight: 700;
+  border-radius: 26px;
+  box-shadow: 0 6px 18px #e3b04b24;
+  padding: 1em 2em;
+  font-size: 1.1rem;
+  text-transform: uppercase;
+  border: none;
+  display: inline-block;
+  transition: background 0.2s, color 0.2s;
+}
+.hero-btn:hover {
+  background: #a0792d;
+  color: #fffbe6;
+}
+
+
+/* -------------------- FEATURES -------------------- */
+.fe-features-row {
+  max-width: 1080px;
+  margin: 0 auto 2.4rem auto;
+  display: flex;
+  gap: 2.15rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.fe-feature-card {
+  background: var(--fe-card);
+  border-radius: 21px;
+  box-shadow: 0 10px 31px #e3b04b13;
+  padding: 2.1rem 1.6rem 1.34rem 1.6rem;
+  flex: 1 1 265px;
+  min-width: 230px;
+  text-align: center;
+  transition: box-shadow 0.13s, transform 0.14s;
+}
+.fe-feature-card:hover {
+  box-shadow: 0 21px 42px #e3b04b19; transform: scale(1.05);
+}
+.fe-feature-img {
+  width: 190px;
+  height: 190px;
+  object-fit: cover;
+  border-radius: 18px;
+  margin: 0 auto 1.1em auto;
+  box-shadow: 0 10px 22px #e3b04b19;
+  display: block;
+}
+
+/* -------------------- IMPACT SECTION -------------------- */
+.fe-impact-section {
+  max-width: 1100px;
+  margin: 2.8rem auto 3rem auto;
+  text-align: center;
+}
+.fe-impact-title {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.7rem;
+  color: var(--fe-green);
+  margin-bottom: 2rem;
+}
+.fe-steps {
+  display: flex; gap: 2.1rem; justify-content: center; flex-wrap: wrap;
+}
+.impact-card {
+  background: var(--fe-card);
+  border-radius: 19px;
+  box-shadow: 0 12px 38px #e3b04b0f;
+  padding: 2rem 1.2rem;
+  min-width: 200px; max-width: 275px;
+  text-align: center; font-size: 1.05rem;
+  transition: box-shadow 0.15s, transform 0.13s;
+}
+.impact-card:hover {
+  box-shadow: 0 18px 39px #e3b04b23; transform: translateY(-6px) scale(1.04);
+}
+.fe-step-number {
+  display: inline-block;
+  font-size: 1.4rem;
+  background: var(--fe-gold);
+  color: #fffdfa;
+  border-radius: 50%;
+  width: 2.7rem; height: 2.7rem; line-height: 2.7rem;
+  margin-bottom: 0.8rem;
+  font-family: 'Playfair Display', serif;
+  font-weight: 700;
+}
+
+/* -------------------- CTA SECTION -------------------- */
+.fe-cta-section {
+  max-width: 1100px;
+  margin: 3.2rem auto;
+  background: var(--fe-card);
+  border-radius: 30px;
+  box-shadow: 0 10px 39px #e3b04b13;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+  padding: 2.4rem;
+  border-bottom: 4px solid #e3b04b18;
+}
+.fe-cta-section h2 {
+  font-family: 'Playfair Display', serif;
+  color: var(--fe-gold);
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+.fe-cta-image {
+  width: 295px;
+  border-radius: 19px;
+  box-shadow: 0 7px 20px #e3b04b0d;
+  object-fit: cover;
+}
+@media (max-width: 900px) {
+  .fe-cta-section { flex-direction: column; text-align: center; }
+  .fe-cta-image { width: 95vw; margin-top: 1.2rem; }
+}
+
+/* -------------------- IMPACT NUMBERS -------------------- */
+.fe-impact-numbers {
+  max-width: 900px;
+  margin: 2.3rem auto;
+  display: flex; gap: 1.7rem;
+  justify-content: center; flex-wrap: wrap;
+}
+.fe-impact-number {
+  background: var(--fe-card);
+  border-radius: 15px;
+  box-shadow: 0 7px 19px #e3b04b16;
+  padding: 1.6rem 1.2rem;
+  display: flex; flex-direction: column; align-items: center;
+  min-width: 127px; max-width: 170px;
+  font-size: 1.1rem;
+}
+.fe-impact-number > div {
+  font-size: 1.6rem;
+  color: var(--fe-gold);
+  font-family: 'Playfair Display', serif;
+  font-weight: 700;
+}
+.fe-impact-number span {
+  color: var(--fe-green);
+  font-size: 1rem;
+  margin-top: 0.3em;
+}
+
+/* -------------------- FOOTER -------------------- */
+.fe-footer {
+  width: 100%;
+  text-align: center;
+  color: #b99c4a;
+  font-size: 1rem;
+  background: #fffefaed;
+  padding: 1.3rem 0;
+  border-top: 2px solid #e3b04b2e;
+  box-shadow: 0 -2px 8px #e3b04b15;
+  margin-top: auto;
+}
+
+/* -------------------- ANIMATIONS -------------------- */
+@keyframes fadeInUp {
+  0% { opacity:0; transform: translateY(34px);}
+  100% { opacity:1; transform: none;}
+}
+@keyframes bounceIn {
+  0%,20%,40%,60%,80%,100% { animation-timing-function:cubic-bezier(.215,.610,.355,1); }
+  0%{ opacity:0; transform:scale(.3);}
+  80%{ transform:scale(1.06);}
+  100%{ opacity:1; transform:scale(1);}
+}
+.animate-fadeInUp { animation: fadeInUp 1s ease both; }
+.animate-bounceIn { animation: bounceIn 1s both; }
+
+/* -------------------- MOBILE -------------------- */
+@media (max-width: 700px) {
+  .hero-content h1 { font-size: 2rem; }
+  .hero-content p { font-size: 1.1rem; }
+  .fe-features-row, .fe-impact-numbers, .fe-steps {
+    flex-direction: column;
+    gap: 1.1rem;
+  }
+}

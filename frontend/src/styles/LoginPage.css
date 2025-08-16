@@ -1,0 +1,137 @@
+body {
+  background: #f6f5ed;
+}
+.lux-bg {
+  min-height: 100vh;
+  background: linear-gradient(120deg, #faf3e4 0%, #fdf8e6 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2vw;
+}
+
+.lux-card {
+  background: #fff;
+  border-radius: 18px;
+  box-shadow: 0 8px 32px rgba(63, 80, 51, 0.18), 0 1.5px 16px rgba(191, 160, 106, 0.09);
+  padding: 38px 44px 36px 44px;
+  width: 100%;
+  max-width: 400px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.lux-logo {
+  width: 180px;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 14px;
+  box-shadow: 0 2px 14px rgba(188, 183, 127, 0.16);
+  margin-bottom: 12px;
+}
+
+.lux-title {
+  font-family: 'Playfair Display', 'Georgia', serif;
+  font-size: 2.1rem;
+  color: #305330;
+  font-weight: 700;
+  letter-spacing: 1px;
+  margin: 8px 0 2px 0;
+}
+
+.lux-subtitle {
+  color: #bfa06a;
+  font-size: 1.06rem;
+  letter-spacing: 1px;
+  margin-bottom: 22px;
+  font-family: 'Montserrat', Arial, sans-serif;
+  font-weight: 500;
+}
+
+.lux-field {
+  width: 100%;
+  position: relative;
+  margin-bottom: 16px;
+  display: flex;
+  align-items: center;
+}
+
+.lux-icon {
+  position: absolute;
+  left: 14px;
+  color: #bfa06a;
+  font-size: 1.2rem;
+}
+
+.lux-input {
+  width: 100%;
+  padding: 10px 12px 10px 38px;
+  border: 1.5px solid #e4e0d1;
+  border-radius: 7px;
+  font-size: 1rem;
+  background: #f9f6f0;
+  outline: none;
+  transition: border-color 0.15s;
+  font-family: inherit;
+  margin-bottom: 2px;
+}
+
+.lux-input:focus {
+  border-color: #bfa06a;
+  background: #fff;
+}
+
+.lux-links {
+  width: 100%;
+  text-align: right;
+  margin-bottom: 5px;
+}
+
+.lux-link {
+  color: #bfa06a;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 0.97rem;
+  transition: color 0.2s;
+}
+.lux-link:hover { color: #315533; }
+
+.lux-error {
+  color: #b73535;
+  background: #fde9e9;
+  border-radius: 6px;
+  padding: 6.5px 0 6.5px 13px;
+  font-size: 0.99rem;
+  margin: 9px 0 2px 0;
+  font-weight: 600;
+  width: 100%;
+  text-align: left;
+}
+
+.lux-btn {
+  width: 100%;
+  background: linear-gradient(90deg, #bfa06a 70%, #e8d7b3 100%);
+  color: #fff !important;
+  border: none;
+  padding: 11px 0 12px 0;
+  border-radius: 8px;
+  font-size: 1.13rem;
+  font-weight: 700;
+  margin: 7px 0 12px 0;
+  letter-spacing: 1px;
+  box-shadow: 0 2px 8px rgba(191, 160, 106, 0.13);
+  transition: background 0.18s, box-shadow 0.18s;
+  cursor: pointer;
+}
+.lux-btn:hover, .lux-btn:focus {
+  background: linear-gradient(90deg, #315533 80%, #bfa06a 100%);
+  color: #fff;
+}
+
+.lux-bottom {
+  text-align: center;
+  font-size: 1.02rem;
+  margin-top: 2px;
+  color: #305330;
+}

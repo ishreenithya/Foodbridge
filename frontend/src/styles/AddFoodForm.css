@@ -1,0 +1,175 @@
+.lux-bg {
+  min-height: 100vh;
+  background: linear-gradient(120deg, #fbf5e9 0%, #f6fafe 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2vw;
+}
+
+.lux-card.af-card {
+  background: #fff;
+  border-radius: 18px;
+  box-shadow: 0 8px 32px rgba(63, 80, 51, 0.16), 0 2px 10px rgba(191, 160, 106, 0.07);
+  padding: 38px 44px 36px 44px;
+  width: 100%;
+  max-width: 470px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.lux-banner {
+  width: 90px;
+  height: 90px;
+  object-fit: cover;
+  border-radius: 16px;
+  margin-bottom: 12px;
+  box-shadow: 0 2px 14px rgba(51,102,204,0.10);
+}
+
+.lux-title {
+  font-family: 'Playfair Display', 'Georgia', serif;
+  font-size: 2rem;
+  color: #305330;
+  font-weight: 700;
+  letter-spacing: 1px;
+  margin: 8px 0 2px 0;
+}
+
+.lux-subtitle {
+  color: #30705A;
+  font-size: 1.08rem;
+  margin-bottom: 10px;
+  text-align: center;
+  font-family: 'Montserrat', Arial, sans-serif;
+  font-weight: 500;
+}
+
+.af-highlights {
+  list-style: none;
+  padding: 0;
+  margin-bottom: 21px;
+  color: #2e7d32;
+  font-size: 1.02rem;
+  text-align: left;
+  align-self: flex-start;
+}
+
+.af-highlights li {
+  margin-bottom: 5px;
+  font-weight: 500;
+}
+
+.lux-field {
+  width: 100%;
+  position: relative;
+  margin-bottom: 16px;
+  display: flex;
+  align-items: center;
+}
+
+.lux-icon {
+  position: absolute;
+  left: 14px;
+  color: #bfa06a;
+  font-size: 1.18rem;
+}
+
+.lux-input {
+  width: 100%;
+  padding: 10px 12px 10px 38px;
+  border: 1.5px solid #e4e0d1;
+  border-radius: 7px;
+  font-size: 1rem;
+  background: #f9f6f0;
+  outline: none;
+  transition: border-color 0.15s;
+  font-family: inherit;
+  margin-bottom: 2px;
+}
+
+.lux-input:focus {
+  border-color: #bfa06a;
+  background: #fff;
+}
+
+.lux-error {
+  color: #b73535;
+  background: #fde9e9;
+  border-radius: 6px;
+  padding: 7px 0 7px 13px;
+  font-size: 0.99rem;
+  margin: 9px 0 2px 0;
+  font-weight: 600;
+  width: 100%;
+  text-align: left;
+}
+.lux-success {
+  color: #1a8050;
+  background: #e3ffe9;
+  border-radius: 6px;
+  padding: 7px 0 7px 13px;
+  font-size: 0.99rem;
+  margin: 9px 0 2px 0;
+  font-weight: 600;
+  width: 100%;
+  text-align: left;
+}
+
+.af-info {
+  margin: 18px 0 22px 0;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 1.03rem;
+  color: #336142;
+  line-height: 1.5;
+  background: #f8fef5;
+  padding: 10px 16px;
+  border-radius: 9px;
+  box-shadow: 0 1px 8px rgba(67,160,71,0.06);
+}
+
+.af-sideimage {
+  width: 36px;
+  height: 36px;
+  border-radius: 8px;
+  object-fit: cover;
+  box-shadow: 0 1px 6px rgba(67,160,71,0.10);
+}
+
+.lux-btn {
+  width: 100%;
+  background: linear-gradient(90deg, #bfa06a 70%, #e8d7b3 100%);
+  color: #fff !important;
+  border: none;
+  padding: 11px 0 12px 0;
+  border-radius: 8px;
+  font-size: 1.13rem;
+  font-weight: 700;
+  margin: 10px 0 0 0;
+  letter-spacing: 1px;
+  box-shadow: 0 2px 8px rgba(191, 160, 106, 0.13);
+  transition: background 0.18s, box-shadow 0.18s;
+  cursor: pointer;
+}
+.lux-btn:hover, .lux-btn:focus {
+  background: linear-gradient(90deg, #315533 80%, #bfa06a 100%);
+  color: #fff;
+}
+
+@media (max-width: 600px) {
+  .lux-card.af-card {
+    max-width: 98vw;
+    padding: 20px 7vw 24px 7vw;
+  }
+  .lux-banner {
+    width: 64px;
+    height: 64px;
+  }
+  .af-info {
+    font-size: 0.95rem;
+    padding: 8px 7px;
+  }
+}
